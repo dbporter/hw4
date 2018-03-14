@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
+
+body {
+    padding: 0;
+    color: #black;
+    background-color:#F0F8FF;
+    font-family: Amaranth;
+    font-size: 12px;
+}
+
+header {
+    position: fixed;
+    height: 150px;
+    width: 100%;
+    background: #bfbfbf;;
+    text-align: center;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+h1 {
+    font-size: 42px;
+    color: #000080;
+    text-align:center;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-family: Amaranth
+}
+
+h2 {
+    font-size: 28px;
+    color: #000080;
+    text-align: center;
+    padding-top: 10px;
+    font-family: Amaranth;
+}
+
+.main {
+    top: 150px;
+    position: relative;
+    text-align: justify;
+}
+
+.colums {
+    padding-top: 20px;
+    height: 100%;
+}
+
+#left {
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+#center {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#right {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.article {
+    background-color: #F0F8FF;
+    color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.img {
+    width: 80px;
+}
