@@ -31,8 +31,7 @@ let getCurrentWeather = function(pos) {
 let ESPN = function(result) {
 	let source = result.articles[0].source.id;
 	let col = $("#espn").html();
-	let narticles = result.articles.length;
-	for (let i = 0; i < narticles; ++i) {
+	for (let i = 0; i < result.articles.length; ++i) {
 		let item = result.articles[i];
 		let txt = "<div class=\"article" + " " + source + "\">";
 		txt += "<div class=\"pic\"><img class=\"img\" src=\"" + item.urlToImage+"\">";
@@ -40,22 +39,19 @@ let ESPN = function(result) {
 		txt += "<div class=\"snippet\">" + item.description + "</div></div>";
 		col = col + txt;
 		$("#espn").html(col);
-
-	}
+  }
 }
+
 let NYT = function(result) {
 	let nyt_col = $("#nyt").html();
-	let narticles = result.response.docs.length;
-	for (let i = 0; i < narticles; ++i) {
+	for (let i = 0; i < result.response.docs.length; ++i) {
 		let item = result.response.docs[i];
 		if (item.multimedia.length > 0) {
-			let img;
-			for (let m = 0; m<item.multimedia.length; ++m) {
-				if (item.multimedia[m].subtype == "thumbnail") {
-					img = item.multimedia[m].url;
-					break;
-				}
-			}
+		let img;
+		for (let m = 0; m<item.multimedia.length; ++m) {
+			if (item.multimedia[m].subtype == "thumbnail") {
+		   img = item.multimedia[m].url;
+				break;}}
 			let txt = "<div class=\"article nyt\">";
 			txt += "<div class=\"pic\"><img class=\"nytImg\" src=\"https://www.nytimes.com/" + img+"\">";
 			txt += "<span class=\"nytTitle\"><a href=\""+ item.web_url + "\">" + item.headline.main + "</a></span></div>";
@@ -70,7 +66,7 @@ let ESPNNews = function() {
 		url = 'https://newsapi.org/v2/everything?' +
 	          'q=NFL&' +
             'sources=' + 'espn' + '&' +
-	          'sortBy=newest&' +
+	          'sortBy=publishedAt&' +
 	          'apiKey=07fc9eef9658416294fc8edda47e14d5';
 		req = new Request(url);
 		fetch(req).then(convertToJSON).then(ESPN).catch(displayError);
