@@ -43,8 +43,18 @@ h2 {
     position: relative;
     text-align: justify;
 }
-
-.colums {
+.leftCol {
+    width: 40%;
+    padding-top: 20px;
+    height: 100%;
+}
+.centerCol {
+    width: 40%;
+    padding-top: 20px;
+    height: 100%;
+}
+.rightCol {
+    width: 20%;
     padding-top: 20px;
     height: 100%;
 }
