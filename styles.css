@@ -45,17 +45,17 @@ h2 {
 }
 .leftCol {
     width: 40%;
-    padding-top: 20px;
+    padding-top: 10px;
     height: 100%;
 }
 .centerCol {
     width: 40%;
-    padding-top: 20px;
+    padding-top: 10px;
     height: 100%;
 }
 .rightCol {
     width: 20%;
-    padding-top: 20px;
+    padding-top: 10px;
     height: 100%;
 }
 
@@ -63,7 +63,7 @@ h2 {
     background-color: #F0F8FF;
     color: black;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .pic {
@@ -73,5 +73,5 @@ h2 {
     color: black;
 }
 .img {
-    width: 80px;
+    width: 100px;
 }
