@@ -50,8 +50,7 @@ let NYT = function(result) {
 		let img;
 		for (let m = 0; m<item.multimedia.length; ++m) {
 			if (item.multimedia[m].subtype == "thumbnail") {
-		   img = item.multimedia[m].url;
-				break;}}
+		   img = item.multimedia[m].url;}}
 			let txt = "<div class=\"article nyt\">";
 			txt += "<div class=\"pic\"><img class=\"nytImg\" src=\"https://www.nytimes.com/" + img+"\">";
 			txt += "<span class=\"nytTitle\"><a href=\""+ item.web_url + "\">" + item.headline.main + "</a></span></div>";
